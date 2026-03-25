@@ -5,6 +5,7 @@ import agencyStrategy from "@/assets/agency-strategy.jpg";
 import agencyContent from "@/assets/agency-content.jpg";
 import agencyDesign from "@/assets/agency-design.jpg";
 import TextImageReveal from './TextImageReveal';
+//mera hai bhai
 export function BentoSection() {
   return (
     <section
