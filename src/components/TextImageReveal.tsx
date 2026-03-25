@@ -99,7 +99,7 @@ const TextImageReveal: React.FC = () => {
                       gap-1 md:gap-8 
                       py-4 md:py-0 
                       px-4 md:px-0
-                      min-h-[40vh] md:min-h-screen">
+                      min-h-[40vh] md:min-h-screen relative z-[2]">
 
         {/* Line 1 */}
         <div className="line flex flex-wrap items-center justify-center gap-1 md:gap-[20px]">
