@@ -183,9 +183,9 @@ const TextImageReveal: React.FC = () => {
 
       {/* ================= OUTRO ================= */}
       <div className="w-screen flex items-center justify-center px-5 md:px-10 
-                      h-auto py-10 md:h-screen md:py-0">
+                      h-auto py-10 md:h-screen md:py-0 relative z-[2]">
         <Copy blockColor="#fe0100">
-          <h1 className="text-4xl sm:text-[3.5rem] md:text-[6rem] font-bold tracking-[-0.05rem] md:tracking-[-0.1rem] text-[#2B2E35] text-center leading-tight md:leading-none">
+          <h1 className="text-4xl sm:text-[3.5rem] md:text-[6rem] font-bold tracking-[-0.05rem] md:tracking-[-0.1rem] text-primary-foreground text-center leading-tight md:leading-none">
             Cinematography thrives in the details from the grain to the falloff to
             the glow.
           </h1>
