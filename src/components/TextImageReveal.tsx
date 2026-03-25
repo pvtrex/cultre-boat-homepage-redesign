@@ -68,13 +68,26 @@ const TextImageReveal: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="w-full overflow-x-hidden bg-[#f5f5f0] text-[#1a1a1a] !py-0"
+      className="w-full overflow-x-hidden relative text-primary-foreground !py-0"
     >
+      {/* Dark cinematic background video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        aria-hidden="true"
+      >
+        <source src="/bg-video.mp4" type="video/mp4" />
+      </video>
+      {/* Subtle overlay to ensure text contrast */}
+      <div className="absolute inset-0 bg-foreground/30 z-[1]" />
       {/* ================= INTRO ================= */}
       <div className="w-screen flex items-center justify-center px-5 md:px-10 
-                      h-auto py-10 md:h-screen md:py-0">
+                      h-auto py-10 md:h-screen md:py-0 relative z-[2]">
         <Copy blockColor="#fe0100">
-          <h1 className="text-4xl sm:text-[3.5rem] md:text-[6rem] font-bold tracking-[-0.05rem] md:tracking-[-0.1rem] text-[#2B2E35] text-center leading-tight md:leading-none">
+          <h1 className="text-4xl sm:text-[3.5rem] md:text-[6rem] font-bold tracking-[-0.05rem] md:tracking-[-0.1rem] text-primary-foreground text-center leading-tight md:leading-none">
             Framed in tungsten and shadows, every shot holds its own deliberate
             tension.
           </h1>
@@ -86,7 +99,7 @@ const TextImageReveal: React.FC = () => {
                       gap-1 md:gap-8 
                       py-4 md:py-0 
                       px-4 md:px-0
-                      min-h-[40vh] md:min-h-screen">
+                      min-h-[40vh] md:min-h-screen relative z-[2]">
 
         {/* Line 1 */}
         <div className="line flex flex-wrap items-center justify-center gap-1 md:gap-[20px]">
@@ -170,9 +183,9 @@ const TextImageReveal: React.FC = () => {
 
       {/* ================= OUTRO ================= */}
       <div className="w-screen flex items-center justify-center px-5 md:px-10 
-                      h-auto py-10 md:h-screen md:py-0">
+                      h-auto py-10 md:h-screen md:py-0 relative z-[2]">
         <Copy blockColor="#fe0100">
-          <h1 className="text-4xl sm:text-[3.5rem] md:text-[6rem] font-bold tracking-[-0.05rem] md:tracking-[-0.1rem] text-[#2B2E35] text-center leading-tight md:leading-none">
+          <h1 className="text-4xl sm:text-[3.5rem] md:text-[6rem] font-bold tracking-[-0.05rem] md:tracking-[-0.1rem] text-primary-foreground text-center leading-tight md:leading-none">
             Cinematography thrives in the details from the grain to the falloff to
             the glow.
           </h1>
