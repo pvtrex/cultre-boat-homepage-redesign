@@ -68,8 +68,21 @@ const TextImageReveal: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="w-full overflow-x-hidden bg-[#f5f5f0] text-[#1a1a1a] !py-0"
+      className="w-full overflow-x-hidden relative text-primary-foreground !py-0"
     >
+      {/* Dark cinematic background video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        aria-hidden="true"
+      >
+        <source src="/bg-video.mp4" type="video/mp4" />
+      </video>
+      {/* Subtle overlay to ensure text contrast */}
+      <div className="absolute inset-0 bg-foreground/30 z-[1]" />
       {/* ================= INTRO ================= */}
       <div className="w-screen flex items-center justify-center px-5 md:px-10 
                       h-auto py-10 md:h-screen md:py-0">
