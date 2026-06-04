@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { BentoSection } from "@/components/BentoSection";
 import { CategorySection } from "@/components/CategorySection";
 import { GallerySection } from "@/components/GallerySection";
+import { StudioShowcase } from "@/components/StudioShowcase";
 import { ProductGrid } from "@/components/ProductGrid";
 import CircularGallery from "@/components/CircularGallery";
 import { Footer } from "@/components/Footer";
@@ -24,6 +25,7 @@ const Index = () => {
           <BentoSection />
           <CategorySection />
           <GallerySection />
+          <StudioShowcase />
           <ProductGrid />
         </main>
         <section className="relative h-[600px] w-full">
