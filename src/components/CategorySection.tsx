@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import FlowingMenu from "./FlowingMenu";
-import serviceStrategy from "@/assets/service-strategy.jpg";
-import serviceSocial from "@/assets/service-social.jpg";
-import serviceContent from "@/assets/service-content.jpg";
-import serviceVisual from "@/assets/service-visual.jpg";
+import serviceStrategy from "@/assets/imgdownloader-93814da5.webp";
+import serviceSocial from "@/assets/imgdownloader-64466ad2.webp";
+import serviceContent from "@/assets/imgdownloader-1d399658.webp";
+import serviceVisual from "@/assets/imgdownloader-d9ba41e2.webp";
 
 const services = [
   { 

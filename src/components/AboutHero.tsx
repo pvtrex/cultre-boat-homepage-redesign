@@ -1,5 +1,5 @@
 import { motion, Variants } from "framer-motion";
-import heroImg from "@/assets/hero-creative.jpg";
+import heroImg from "@/assets/imgdownloader-8ab06b48.webp";
 
 interface AboutHeroProps {
   containerVariants: Variants;

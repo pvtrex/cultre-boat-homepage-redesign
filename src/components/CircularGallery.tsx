@@ -1,5 +1,17 @@
 import { Camera, Mesh, Plane, Program, Renderer, Texture, Transform } from 'ogl';
 import { useEffect, useRef } from 'react';
+import cg1 from '@/assets/imgdownloader-ba5e1a2c.webp';
+import cg2 from '@/assets/imgdownloader-8937116a.webp';
+import cg3 from '@/assets/imgdownloader-0c30dc94.webp';
+import cg4 from '@/assets/imgdownloader-26ab8010.webp';
+import cg5 from '@/assets/imgdownloader-5288655b.webp';
+import cg6 from '@/assets/imgdownloader-90caa116.webp';
+import cg7 from '@/assets/imgdownloader-bd32bf60.webp';
+import cg8 from '@/assets/imgdownloader-c03ffd23.webp';
+import cg9 from '@/assets/imgdownloader-1dcff636.webp';
+import cg10 from '@/assets/imgdownloader-20636367.webp';
+import cg11 from '@/assets/imgdownloader-64466ad2.webp';
+import cg12 from '@/assets/imgdownloader-d9ba41e2.webp';
 
 type GL = Renderer['gl'];
 
@@ -431,18 +443,18 @@ class GalleryApp {
 
   createMedias(items: { image: string; text: string }[] | undefined, bend: number = 1, textColor: string, borderRadius: number, font: string) {
     const defaultItems = [
-      { image: `https://picsum.photos/seed/1/800/600`, text: 'Bridge' },
-      { image: `https://picsum.photos/seed/3/800/600`, text: 'Waterfall' },
-      { image: `https://picsum.photos/seed/2/800/600`, text: 'Desk Setup' },
-      { image: `https://picsum.photos/seed/4/800/600`, text: 'Strawberries' },
-      { image: `https://picsum.photos/seed/5/800/600`, text: 'Deep Diving' },
-      { image: `https://picsum.photos/seed/16/800/600`, text: 'Train Track' },
-      { image: `https://picsum.photos/seed/17/800/600`, text: 'Santorini' },
-      { image: `https://picsum.photos/seed/8/800/600`, text: 'Blurry Lights' },
-      { image: `https://picsum.photos/seed/9/800/600`, text: 'New York' },
-      { image: `https://picsum.photos/seed/10/800/600`, text: 'Good Boy' },
-      { image: `https://picsum.photos/seed/21/800/600`, text: 'Coastline' },
-      { image: `https://picsum.photos/seed/12/800/600`, text: 'Palm Trees' }
+      { image: cg1, text: 'Brand Identity' },
+      { image: cg2, text: 'Strategy' },
+      { image: cg3, text: 'Creative Direction' },
+      { image: cg4, text: 'Visual Design' },
+      { image: cg5, text: 'Content Creation' },
+      { image: cg6, text: 'Digital Marketing' },
+      { image: cg7, text: 'Storytelling' },
+      { image: cg8, text: 'Social Media' },
+      { image: cg9, text: 'Photography' },
+      { image: cg10, text: 'Motion Design' },
+      { image: cg11, text: 'Web Experience' },
+      { image: cg12, text: 'Culture' }
     ];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);

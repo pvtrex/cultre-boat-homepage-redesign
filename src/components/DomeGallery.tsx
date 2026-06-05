@@ -2,13 +2,13 @@
  import { useGesture } from '@use-gesture/react';
  
  // Import gallery images
- import gallery1 from '@/assets/gallery-1.jpg';
- import gallery2 from '@/assets/gallery-2.jpg';
- import gallery3 from '@/assets/gallery-3.jpg';
- import gallery4 from '@/assets/gallery-4.jpg';
- import gallery5 from '@/assets/gallery-5.jpg';
- import gallery6 from '@/assets/gallery-6.jpg';
- import gallery7 from '@/assets/gallery-7.jpg';
+ import gallery1 from '@/assets/imgdownloader-1dcff636.webp';
+ import gallery2 from '@/assets/imgdownloader-5288655b.webp';
+ import gallery3 from '@/assets/imgdownloader-26ab8010.webp';
+ import gallery4 from '@/assets/imgdownloader-90caa116.webp';
+ import gallery5 from '@/assets/imgdownloader-0c30dc94.webp';
+ import gallery6 from '@/assets/imgdownloader-bd32bf60.webp';
+ import gallery7 from '@/assets/imgdownloader-c03ffd23.webp';
  
  const DEFAULT_IMAGES = [
    { src: gallery1, alt: 'Luxury inflatable boat at sunset with magenta sky reflections' },

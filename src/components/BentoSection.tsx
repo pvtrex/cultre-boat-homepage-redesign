@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import agencyStrategy from "@/assets/agency-strategy.jpg";
-import agencyContent from "@/assets/agency-content.jpg";
-import agencyDesign from "@/assets/agency-design.jpg";
+import agencyStrategy from "@/assets/imgdownloader-a3cf4b2f.webp";
+import agencyContent from "@/assets/imgdownloader-4ffaff39.webp";
+import agencyDesign from "@/assets/imgdownloader-b87de812.webp";
 import TextImageReveal from './TextImageReveal';
 //mera hai bhai
 export function BentoSection() {

@@ -3,6 +3,10 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
 import Copy from "./Copy";
+import revealImg1 from "@/assets/imgdownloader-0ff3bf2b.webp";
+import revealImg2 from "@/assets/imgdownloader-2ff01c60.webp";
+import revealImg3 from "@/assets/imgdownloader-ac5129b8.webp";
+import revealImg4 from "@/assets/imgdownloader-ffa08455.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -109,7 +113,7 @@ const TextImageReveal: React.FC = () => {
 
           <span className="img-span h-[40px] md:h-[110px] w-0 overflow-hidden rounded-[5px] relative">
             <img
-              src="https://i.pinimg.com/1200x/93/27/65/932765c7cd00055218ba7398119d7d4d.jpg"
+              src={revealImg1}
               alt=""
               className="h-full w-[120px] md:w-[300px] absolute left-1/2 -translate-x-1/2 object-cover rounded-[5px]"
             />
@@ -128,7 +132,7 @@ const TextImageReveal: React.FC = () => {
 
           <span className="img-span h-[40px] md:h-[110px] w-0 overflow-hidden rounded-[5px] relative">
             <img
-              src="https://i.pinimg.com/736x/a9/f1/19/a9f11909a9644d7bfd5102fabcd8310c.jpg"
+              src={revealImg2}
               alt=""
               className="h-full w-[120px] md:w-[300px] absolute left-1/2 -translate-x-1/2 object-cover rounded-[5px]"
             />
@@ -147,7 +151,7 @@ const TextImageReveal: React.FC = () => {
 
           <span className="img-span h-[40px] md:h-[110px] w-0 overflow-hidden rounded-[5px] relative">
             <img
-              src="https://i.pinimg.com/1200x/48/09/77/480977567d6b4503c8f642728f266b72.jpg"
+              src={revealImg3}
               alt=""
               className="h-full w-[120px] md:w-[300px] absolute left-1/2 -translate-x-1/2 object-cover rounded-[5px]"
             />
@@ -169,7 +173,7 @@ const TextImageReveal: React.FC = () => {
 
           <span className="img-span h-[40px] md:h-[110px] w-0 overflow-hidden rounded-[5px] relative">
             <img
-              src="https://i.pinimg.com/1200x/9e/f2/b7/9ef2b73b1e2ff489f99bc0a90196fbea.jpg"
+              src={revealImg4}
               alt=""
               className="h-full w-[120px] md:w-[300px] absolute left-1/2 -translate-x-1/2 object-cover rounded-[5px]"
             />

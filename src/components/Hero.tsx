@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
-import heroImage from "@/assets/hero-creative.jpg";
-import agencyStrategy from "@/assets/agency-strategy.jpg";
-import agencyDesign from "@/assets/agency-design.jpg";
+import heroImage from "@/assets/imgdownloader-4cd3c9cc.webp";
+import thumb1 from "@/assets/imgdownloader-52dceea8.webp";
+import thumb2 from "@/assets/imgdownloader-0b2ed353.webp";
 
 export function Hero() {
   const scrollToAbout = () => {
@@ -112,7 +112,7 @@ export function Hero() {
               transition={{ delay: 0.7, duration: 0.6 }}
               className="absolute -right-4 top-1/4 flex flex-col gap-3"
             >
-              {[agencyStrategy, agencyDesign].map((img, i) => (
+              {[thumb1, thumb2].map((img, i) => (
                 <motion.button
                   key={i}
                   whileHover={{ scale: 1.05 }}

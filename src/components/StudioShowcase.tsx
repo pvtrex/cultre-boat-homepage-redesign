@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import { ErrorBoundary } from "./ErrorBoundary";
-import studioFallbackImg from "@/assets/menu-interior.jpg";
+import studioFallbackImg from "@/assets/imgdownloader-108be5a0.webp";
 
 const MusicStudio3D = lazy(() => import("./MusicStudio3D"));
 

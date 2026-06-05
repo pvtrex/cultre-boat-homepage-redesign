@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { ProductCard } from "./ProductCard";
-import agencyStrategy from "@/assets/agency-strategy.jpg";
-import agencyContent from "@/assets/agency-content.jpg";
-import agencyDesign from "@/assets/agency-design.jpg";
-import agencySocial from "@/assets/agency-social.jpg";
+import agencyStrategy from "@/assets/imgdownloader-3e7cd4ff.webp";
+import agencyContent from "@/assets/imgdownloader-b467bbd0.webp";
+import agencyDesign from "@/assets/imgdownloader-f770b4a8.webp";
+import agencySocial from "@/assets/imgdownloader-20636367.webp";
 
 // Services data
 const services = [
