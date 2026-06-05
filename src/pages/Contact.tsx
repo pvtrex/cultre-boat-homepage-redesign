@@ -2,9 +2,10 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import ContactHero from "@/components/ContactHero";
 import ContactFormSection from "@/components/ContactFormSection";
+import { Variants } from "framer-motion";
 
 export default function Contact() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -15,7 +16,7 @@ export default function Contact() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 15 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
   };
