@@ -1,5 +1,7 @@
 import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
+import { ErrorBoundary } from "./ErrorBoundary";
+import studioFallbackImg from "@/assets/menu-interior.jpg";
 
 const MusicStudio3D = lazy(() => import("./MusicStudio3D"));
 
@@ -57,7 +59,31 @@ export function StudioShowcase() {
                 </div>
               }
             >
-              <MusicStudio3D />
+              <ErrorBoundary
+                fallback={
+                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-zinc-950 p-6 text-center">
+                    <div className="text-accent text-xs font-semibold tracking-[0.25em] uppercase mb-3">
+                      Interactive Preview
+                    </div>
+                    <h3 className="font-display text-2xl font-bold text-white mb-2 leading-tight">
+                      Music Studio
+                    </h3>
+                    <p className="text-zinc-400 text-sm max-w-xs leading-relaxed mb-6">
+                      Our dynamic studio features professional audio equipment, sound mixing boards, and customized acoustic treatment to tune branding soundscapes.
+                    </p>
+                    <div className="relative w-full aspect-video rounded-xl overflow-hidden ring-1 ring-white/10">
+                      <img
+                        src={studioFallbackImg}
+                        alt="Music Studio Interior"
+                        className="w-full h-full object-cover grayscale opacity-60 contrast-125"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent" />
+                    </div>
+                  </div>
+                }
+              >
+                <MusicStudio3D />
+              </ErrorBoundary>
             </Suspense>
             <div className="pointer-events-none absolute bottom-4 right-4 text-[10px] uppercase tracking-[0.3em] text-primary-foreground/40">
               Drag · Rotate

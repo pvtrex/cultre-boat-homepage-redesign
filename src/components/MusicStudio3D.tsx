@@ -2,15 +2,21 @@ import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { useGLTF, OrbitControls, Bounds, Center } from "@react-three/drei";
 import * as THREE from "three";
-import studioAsset from "@/assets/music_studio_scene.glb.asset.json";
+
+const MODEL_PATH = "/scene.gltf";
+
+interface MaterialWithMaps extends THREE.Material {
+  map?: THREE.Texture | null;
+  emissiveMap?: THREE.Texture | null;
+}
 
 function Model() {
-  const { scene } = useGLTF(studioAsset.url);
+  const { scene } = useGLTF(MODEL_PATH);
   // Ensure textures decode in sRGB so colors match the source render
-  scene.traverse((obj: any) => {
-    if (obj.isMesh && obj.material) {
-      const mats = Array.isArray(obj.material) ? obj.material : [obj.material];
-      mats.forEach((m: any) => {
+  scene.traverse((obj: THREE.Object3D) => {
+    if (obj instanceof THREE.Mesh && obj.material) {
+      const mats = (Array.isArray(obj.material) ? obj.material : [obj.material]) as MaterialWithMaps[];
+      mats.forEach((m) => {
         if (m.map) m.map.colorSpace = THREE.SRGBColorSpace;
         if (m.emissiveMap) m.emissiveMap.colorSpace = THREE.SRGBColorSpace;
       });
@@ -19,7 +25,7 @@ function Model() {
   return <primitive object={scene} />;
 }
 
-useGLTF.preload(studioAsset.url);
+useGLTF.preload(MODEL_PATH);
 
 export default function MusicStudio3D() {
   return (

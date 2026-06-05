@@ -2,12 +2,13 @@ import { useState, useEffect, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
 import StaggeredMenu from "@/components/StaggeredMenu";
+import { Link } from "react-router-dom";
 
 const navLinks = [
-  { name: "Home", href: "#" },
-  { name: "Services", href: "#services" },
-  { name: "About", href: "#about" },
-  { name: "Work", href: "#gallery" },
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/#services" },
+  { name: "About", href: "/about" },
+  { name: "Work", href: "/#gallery" },
 ];
 
 export function Header() {
@@ -45,32 +46,34 @@ export function Header() {
         <nav className="flex items-center justify-between">
 
           {/* Logo */}
-          <a
-            href="#"
+          <Link
+            to="/"
             className="font-display text-3xl md:text-2xl font-bold tracking-tight text-foreground "
           >
             Cultre Boat
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <ul className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <li key={link.name}>
-                <a
-                  href={link.href}
+                <Link
+                  to={link.href}
                   className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
 
           {/* Desktop Button */}
           <div className="hidden md:flex items-center gap-3">
-            <Button className="rounded-full ml-2" size="sm">
-              Let's Talk
-            </Button>
+            <Link to="/contact">
+              <Button className="rounded-full ml-2" size="sm">
+                Let's Talk
+              </Button>
+            </Link>
           </div>
         </nav>
       </div>
