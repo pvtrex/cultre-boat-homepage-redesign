@@ -10,7 +10,7 @@ import MissionVision from "@/components/MissionVision";
 import CoreValues from "@/components/CoreValues";
 import Expertise from "@/components/Expertise";
 
-export default function About() {
+const About = () => {
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -69,4 +69,7 @@ export default function About() {
       <Footer />
     </div>
   );
-}
+};
+
+export default About;
+

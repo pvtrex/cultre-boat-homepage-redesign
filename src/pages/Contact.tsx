@@ -4,7 +4,7 @@ import ContactHero from "@/components/ContactHero";
 import ContactFormSection from "@/components/ContactFormSection";
 import { Variants } from "framer-motion";
 
-export default function Contact() {
+const Contact = () => {
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -31,4 +31,6 @@ export default function Contact() {
       <Footer />
     </div>
   );
-}
+};
+
+export default Contact;
